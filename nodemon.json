@@ -1,0 +1,10 @@
+{
+    "watch": ["src"],
+    "ext": "js,json,ts",
+    "exec": "ts-node src/index.ts",
+    "delay": 1000,
+    "env": {
+      "NODE_ENV": "development"
+    }
+  }
+  
