@@ -19,7 +19,7 @@ const mongodb = 'e-commerce'
 const mongodb_offline = 'mongo_service'
 
 export const mongo: Config = {
-    port: 5000,
+    port: 5100,
     dest_port: 5600,
     admin_port: 5700,
     url: `mongodb+srv://${secrets}@gp2-cloud.pefe5tc.mongodb.net/${mongodb}?retryWrites=true&w=majority`,
