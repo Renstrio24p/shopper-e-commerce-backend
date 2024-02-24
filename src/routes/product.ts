@@ -113,6 +113,15 @@ export const router = () => {
         console.log('All products offline fetched.')
     })
 
+    // All product online
+
+    app.get('/allproducts', async (_req: Request, res: Response): Promise<Expression> => {
+        let products = await Product.find({})
+        res.send(products)
+        console.log(products)
+        console.log('All products offline fetched.')
+    })
+
     // Get New  Offline Collection
 
     app.get('/newofflinecollection', async (_req: Request, res: Response): Promise<Expression> => {
@@ -122,9 +131,27 @@ export const router = () => {
         res.send(newcollection)
     })
 
+    // Get New  Online Collection
+
+    app.get('/newcollection', async (_req: Request, res: Response): Promise<Expression> => {
+        let products = await Product.find({})
+        let newcollection = products.slice(1).slice(-8)
+        console.log("New Collection Fetched")
+        res.send(newcollection)
+    })
+
     // Popular Offline in Women
 
     app.get('/popularinofflinewomen', async (_req: Request, res: Response): Promise<Expression> => {
+        let products = await ProductOffline.find({ category: "women" })
+        let popular_in_women = products.slice(0, 4)
+        console.log("Popular in Women Fetched")
+        res.send(popular_in_women)
+    })
+
+    // Popular Online in Women
+
+    app.get('/popularinwomen', async (_req: Request, res: Response): Promise<Expression> => {
         let products = await ProductOffline.find({ category: "women" })
         let popular_in_women = products.slice(0, 4)
         console.log("Popular in Women Fetched")

@@ -8,13 +8,11 @@ app.use(modules.express.json());
 app.use(modules.cors({
   origin: [
     // Admin Origin Port
-    'https://ecommerce-backend-7fnr0mqga-renstrio24p.vercel.app',
-    `http://localhost:${mongo.admin_port}`,
+    `http://localhost:5700`,
     // Destination Port
-    `http://localhost:${mongo_compass.dest_port}`, 
+    `http://localhost:5600`, 
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'auth-token']
 }));
 
 // Database Connection
