@@ -33080,17 +33080,18 @@ let i={user:{id:r.id}},s=Ps.jwt.sign(i,"secret_eco\
 m");e.json({success:!0,token:s})}else e.json({success:!1,
 errors:"Wrong Password"});else e.json({success:!1,
 errors:"Wrong Email address"})})}});var kke=y(()=>{Dp();Vie();Qie();Jie();Bt.use(Ps.express.
-json());Bt.use(Ps.cors({origin:[`http://localhost:${Th.
-admin_port}`,`http://localhost:${AE.dest_port}`],methods:[
-"GET","POST","PUT","DELETE"],allowedHeaders:["Cont\
-ent-Type","auth-token"]}));Ps.mongoose.connect(Th.
-url);Bt.get("/",(t,e)=>{e.send("<p>Node TS Express\
- is Running</p>")});zie();Yie();Xie();Bt.listen(Th.
-port,t=>{t?console.error(`Error starting server: ${t.
-message} connecting to online`):(console.log(`Node\
- TS Server is running on port ${Th.port}`),console.
-log("Mongodb successfully connected to Node TS Ser\
-ver."))})});export default kke();
+json());Bt.use(Ps.cors({origin:["https://ecommerce\
+-backend-7fnr0mqga-renstrio24p.vercel.app",`http:/\
+/localhost:${Th.admin_port}`,`http://localhost:${AE.
+dest_port}`],methods:["GET","POST","PUT","DELETE"],
+allowedHeaders:["Content-Type","auth-token"]}));Ps.
+mongoose.connect(Th.url);Bt.get("/",(t,e)=>{e.send(
+"<p>Node TS Express is Running</p>")});zie();Yie();
+Xie();Bt.listen(Th.port,t=>{t?console.error(`Error\
+ starting server: ${t.message} connecting to onlin\
+e`):(console.log(`Node TS Server is running on por\
+t ${Th.port}`),console.log("Mongodb successfully c\
+onnected to Node TS Server."))})});export default kke();
 /*! Bundled license information:
 
 depd/index.js:
