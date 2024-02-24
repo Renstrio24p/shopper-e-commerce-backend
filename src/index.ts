@@ -8,6 +8,7 @@ app.use(modules.express.json());
 app.use(modules.cors({
   origin: [
     // Admin Origin Port
+    'https://ecommerce-backend-7fnr0mqga-renstrio24p.vercel.app',
     `http://localhost:${mongo.admin_port}`,
     // Destination Port
     `http://localhost:${mongo_compass.dest_port}`, 
