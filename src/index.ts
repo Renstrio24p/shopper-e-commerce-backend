@@ -10,7 +10,7 @@ app.use(modules.cors({
     // Admin Origin Port
     `http://localhost:${mongo.admin_port}`,
     // Destination Port
-    `http://localhost:${mongo.dest_port}`, 
+    `http://localhost:${mongo_compass.dest_port}`, 
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'auth-token']
