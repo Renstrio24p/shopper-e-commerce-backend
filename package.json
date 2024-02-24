@@ -25,6 +25,6 @@
   "scripts": {
     "serve": "nodemon",
     "start": "ts-node src/index.ts",
-    "build": "node esbuild.config.js"
+    "build": "esbuild src/index.ts --outdir=dist --bundle --minify --splitting --format=esm --platform=node"
   }
 }
