@@ -19,7 +19,7 @@ esbuild.build({
     plugins: [
         copy({
             src: './upload/images',
-            dest: './dist/upload/images',
+            dest: './dist/images',
             recursive: true,
             minify: true,
             target: 'es5'

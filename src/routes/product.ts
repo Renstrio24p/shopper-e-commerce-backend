@@ -152,7 +152,7 @@ export const router = () => {
     // Popular Online in Women
 
     app.get('/popularinwomen', async (_req: Request, res: Response): Promise<Expression> => {
-        let products = await ProductOffline.find({ category: "women" })
+        let products = await Product.find({ category: "women" })
         let popular_in_women = products.slice(0, 4)
         console.log("Popular in Women Fetched")
         res.send(popular_in_women)

@@ -10,7 +10,7 @@ export const imageEngine = () => {
     app.post('/upload', upload.single('product'), (req: Request, res: Response) => {
         res.json({
             success: 1,
-            img_url: `http://localhost:${mongo_compass.port}/images/${req.file?.filename}`
+            img_url: `http://localhost:${mongo.port}/images/${req.file?.filename}`
         })
     })
 
